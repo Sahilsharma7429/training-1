@@ -1,187 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<p>Display some text when the checkbox is checked:</p>
+<button onclick="myFunction()" onclick="changename()">Click to auto fill form</button>
+<label for="myCheck">Checkbox:</label> 
+<input type="checkbox" id="myCheck" >
 
-    <title>Hello, world!</title>
-    <script type="text/JavaScript">
-        //alert(56789);
-        // 1. Browser
-        // Content, properties, atrributes
-        // 2. Console 
-        // 3. popup: alert, confirm
-        //document.getElementById("accordionDivOne").innerHTML = "Initial Text";    
-        // any text is called as string
-        // string should be always in quotes, single quote or double quotes.
-        var string1 = "Hello";
-        var string2 = "World";
-        console.log(string1, string2);
+ Total <input type="text" id="count" value="">
+<script>
+setTimeout(function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == false){
+    checkBox.checked = true;
+  } else {
+     text.style.display = "none";
+  }
+},6000)
+setTimeout(function myFunction(){
+          document.getElementById("count").value= "Sahil";
+          
+          },3000)
+</script>
 
-        var text = string1 + " " + string2 + " "  + string1 + " "  + string2;
-        console.log(text);
-
-
-        var number1 = 1, number2 = "5", number3 = 7;
-        console.log(number1, number2, number3);
-        console.log(text);
-
-        var sum = number1 + parseInt(number2);
-        var multiply = number1 * parseInt(number2);
-        var subtract = number1 - parseInt(number2);
-        var divide = number1 / parseInt(number2);
-        console.log("Sum", sum);
-        console.log("multiply", multiply);
-        console.log("subtract", subtract);
-        console.log("divide", divide);
-
-        //alert(text);
-
-        setTimeout(function(){
-            //document.getElementById("accordionDivOne").innerHTML = "One Content";    
-        }, 2000)
-
-        setTimeout(function(){
-            document.getElementById("accordionDivTwo").innerHTML = "Two Content";    
-        }, 4000)
-
-        setTimeout(function(){
-            document.getElementById("accordionDivThree").innerHTML = "Three Content"; 
-        }, 6000)
-
-        setTimeout(function(){
-            document.getElementById("alertOne").innerHTML = text;    
-        }, 2000)
-
-        setTimeout(function(){
-            document.getElementById("alertTwo").innerHTML = text;  
-        }, 4000)
-
-        setTimeout(function(){
-            document.getElementById("alertThree").innerHTML = text; 
-        }, 6000)
-        
-        //numbers and text
-
-        console.log(123123);
-        //console.log(hello);
-        console.log("hello");
-        console.log('hi there');
-    </script>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body" id="accordionDivOne">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body" id="accordionDivTwo">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body" id="accordionDivThree">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="alert alert-primary" id="alertOne" role="alert">
-        A simple primary alert—check it out!
-      </div>
-      <div class="alert alert-secondary" id="alertTwo" role="alert">
-        A simple secondary alert—check it out!
-      </div>
-      <div class="alert alert-success" id="alertThree" role="alert">
-        A simple success alert—check it out!
-      </div>
-      <div class="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
-      </div>
-      <div class="alert alert-warning" role="alert">
-        A simple warning alert—check it out!
-      </div>
-      <div class="alert alert-info" role="alert">
-        A simple info alert—check it out!
-      </div>
-      <div class="alert alert-light" role="alert">
-        A simple light alert—check it out!
-      </div>
-      <div class="alert alert-dark" role="alert">
-        A simple dark alert—check it out!
-      </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-    -->
-    <script type="text/JavaScript">
-        document.getElementById("accordionDivOne").innerHTML = "Initial Text";    
-        //alert(56789);
-        // 1. Browser
-        // Content, properties, atrributes
-        // 2. Console 
-        // 3. popup: alert, confirm
-        //document.write("Test");
-        // setTimeout(function(){
-        //     document.getElementById("accordionDivOne").innerHTML = "One Content";    
-        // }, 2000)
-
-        // setTimeout(function(){
-        //     document.getElementById("accordionDivTwo").innerHTML = "Two Content";    
-        // }, 4000)
-
-        // setTimeout(function(){
-        //     document.getElementById("accordionDivThree").innerHTML = "Three Content"; 
-        // }, 6000)
-
-        // setTimeout(function(){
-        //     document.getElementById("alertOne").innerHTML = "My Alert Text";    
-        // }, 2000)
-
-        // setTimeout(function(){
-        //     document.getElementById("alertTwo").innerHTML = "My Alert Text";  
-        // }, 4000)
-
-        // setTimeout(function(){
-        //     document.getElementById("alertThree").innerHTML = "My Alert Text"; 
-        // }, 6000)
-        
-    </script>
-  </body>
+</body>
 </html>
