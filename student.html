@@ -100,12 +100,13 @@
        <input class="position" type="text" id="gname" name="gname">
        <p  id="radio">Phone No. :<input  class="position" id="phone" type="text" name="name"></p>
        <input id="Submit" type="button" name="Submit" value="Submit">
-       <input id="Auto-Fill" type="button" name="Auto-Fill" onclick="myFunction()" value="Submit">
+       <input id="Auto-Fill" type="button" name="Auto-Fill" onclick="func()" value="Submit">
        <p id="Thanks">Thanks for Registering yourself 😊😊😊😊</p>
      </select>
 	</div>
   <script>
 setTimeout(function myFunction() {
+
   var checkBox = document.getElementById("autocheck");
   if (checkBox.checked == false){
     checkBox.checked = true;
@@ -135,10 +136,11 @@ setTimeout(function myFunction(){
           document.getElementById("phone").value= "9876543210";
           
           },11000)
-setTimeout(function myFunction(){
-          document.getElementById("gname").value= "XYZ Sharma";
-          
-          },15000)
+setTimeout(func,4000)
+function func()
+{
+     document.getElementById("gname").value= "XYZ Sharma";
+}
 </script>
 </body>
 </html>
