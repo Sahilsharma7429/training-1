@@ -12,18 +12,18 @@
   </head>
   <body>
     <form action="#">
-    <div class="container" style="border: 5px solid red;">
-<div class="row px-2 justify-content-center" style="border: 5px solid gray;">
+    <div class="container" >
+<div class="row px-2 justify-content-center" >
   
-    <div class="col-4 align-self-center py-2" style="border: 5px solid blue;">
+    <div class="col-4 align-self-center py-2" >
        <div id="result"  class="alert  alert-primary" role="alert">
             Result will appear here
         </div>
     </div>
 </div>
-<div class="row px-2 justify-content-center" style="border: 5px solid gray;">
+<div class="row px-2 justify-content-center" >
   
-    <div class="col-4 align-self-center" style="border: 5px solid blue;">
+    <div class="col-4 align-self-center" >
       <form action="#">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Number 1</label>
@@ -68,6 +68,8 @@
     -->
     <script type="text/javascript">
 
+           document.getElementById("number1").value = 10;
+        document.getElementById("number2").value = 20;
 
          function sum() {
             var number1 = parseInt(document.getElementById("number1").value);
